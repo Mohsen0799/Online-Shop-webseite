@@ -1,0 +1,164 @@
+/* Schriftarten */
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-weight: bold;
+}
+
+/* Farben */
+
+body {
+  color: #333;
+  background-color: #f5f5f5;
+}
+
+header {
+  background-color: #222;
+  color: #fff;
+}
+
+nav ul li a {
+  color: #fff;
+}
+
+/* Layout */
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+}
+
+nav ul {
+  display: flex;
+  justify-content: flex-end;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 1rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+section {
+  flex: 1 1 100%;
+  margin-bottom: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  section {
+    flex: 1 1 calc(50% - 0.5rem);
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  section {
+    flex: 1 1 calc(33.33% - 0.5rem);
+  }
+}
+
+/* Buttons */
+
+button {
+  background-color: #222;
+  color: #fff;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #444;
+}
+
+/* Formulare */
+
+form label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+form input[type="text"],
+form input[type="email"],
+form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  margin-bottom: 1rem;
+}
+
+form textarea {
+  height: 6rem;
+}
+
+form button {
+  display: block;
+  margin-top: 1rem;
+}
+
+/* Responsive Design */
+
+@media screen and (max-width: 767px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+
+  nav ul {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    position: absolute;
+    top: 3rem;
+    right: 0;
+    background-color: #222;
+    padding: 1rem;
+    width: 100%;
+    height: calc(100vh - 3rem);
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(100%);
+  }
+
+  nav ul li {
+    margin: 0;
+    margin-bottom: 1rem;
+  }
+
+  nav ul.open {
+    transform: translateX(0);
+  }
+
+  nav ul li a {
+    color: #fff;
+    font-size: 1.2rem;
+    text-align: center;
+  }
+
+  button.menu-toggle {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 1rem;
+    background-color: #222;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+
+  button.menu-toggle:hover {
+    background-color: #444;
+  }
+}
